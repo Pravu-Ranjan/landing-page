@@ -43,7 +43,7 @@ function CenterLineContent() {
             </p>
           </Col>
         </Row>
-        <Row className='pt-3 d-flex justify-content-center text-center'>
+        <Row className='d-flex justify-content-center text-center'>
           {centerContentItem ? (
             centerContentItem.map((value, key) => (
               <Col md={3} key={key}>

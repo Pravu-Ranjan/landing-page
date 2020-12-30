@@ -2,8 +2,6 @@ import React, { Fragment } from 'react';
 import {
   Card,
   CardBody,
-  CardImg,
-  CardImgOverlay,
   CardText,
   CardTitle,
   Col,

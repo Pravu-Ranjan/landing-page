@@ -10,7 +10,7 @@ function Footer() {
       <Container className='footer mt-5' fluid>
         <Row className='d-flex justify-content-between p-4'>
           <Col xl={5}>
-            <Label className='footer-text'>Suscribe our newsletter</Label>
+            <Label className='footer-text'>Subscribe our newsletter</Label>
             <p className='footer-subtext'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.

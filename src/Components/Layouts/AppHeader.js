@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, animateScroll as scroll } from 'react-scroll';
 import {
   Collapse,
   Navbar,
@@ -23,48 +23,107 @@ function AppHeader() {
     setActive(id);
     console.log(active, 'dnjks');
   };
-  console.log(active, 'dnjkssadas');
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
   return (
     <div>
       <div>
         <Navbar color='light' light expand='xl' fixed='top'>
-          <NavbarBrand href='/'>Soprano</NavbarBrand>
+          <NavbarBrand type='button' onClick={scrollToTop}>
+            Soprano
+          </NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className='ml-auto ml-5' navbar>
               <NavItem className='mr-5'>
                 <NavLink onClick={handleActiveNav}>
-                  <Link to='/home' id='item1' className='appbar-item'>
+                  <Link
+                    activeClass='active'
+                    to='home'
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    className='appbar-item'
+                  >
                     Home
                   </Link>
+                  {/* <Link to='/home' id='item1' className='appbar-item'>
+                    Home
+                  </Link> */}
                 </NavLink>
               </NavItem>
               <NavItem className='mr-5'>
                 <NavLink onClick={handleActiveNav}>
-                  <Link to='/product' id='item2' className='appbar-item'>
+                  <Link
+                    activeClass='active'
+                    to='product'
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    className='appbar-item'
+                  >
                     Products
                   </Link>
+                  {/* <Link to='/product' id='item2' className='appbar-item'>
+                    Products
+                  </Link> */}
                 </NavLink>
               </NavItem>
               <NavItem className='mr-5'>
                 <NavLink onClick={handleActiveNav}>
-                  <Link to='/about' id='item3' className='appbar-item'>
+                  <Link
+                    activeClass='active'
+                    to='about'
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    className='appbar-item'
+                  >
                     About Us
                   </Link>
+                  {/* <Link to='/about' id='item3' className='appbar-item'>
+                    About Us
+                  </Link> */}
                 </NavLink>
               </NavItem>
               <NavItem className='mr-5'>
                 <NavLink onClick={handleActiveNav}>
-                  <Link to='/demo' id='item4' className='appbar-item'>
+                  <Link
+                    activeClass='active'
+                    to='demo'
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    className='appbar-item'
+                  >
                     Demos
                   </Link>
+                  {/* <Link to='/demo' id='item4' className='appbar-item'>
+                    Demos
+                  </Link> */}
                 </NavLink>
               </NavItem>
               <NavItem className='mr-5'>
                 <NavLink onClick={handleActiveNav}>
-                  <Link to='/contact' id='item5' className='appbar-item'>
+                  <Link
+                    activeClass='active'
+                    to='contact'
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    className='appbar-item'
+                  >
                     Contact Us
                   </Link>
+                  {/* <Link to='/contact' id='item5' className='appbar-item'>
+                    Contact Us
+                  </Link> */}
                 </NavLink>
               </NavItem>
             </Nav>

@@ -10,6 +10,7 @@ import {
 const items = [
   {
     id: 1,
+    //img: require('../../Assets/slide1.jpg').default,
     altText: 'Slide 1',
     caption: 'Slide 1',
   },
@@ -55,6 +56,9 @@ const CarouselBody = (props) => {
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
       >
+        <CarouselBody>
+          <img src={item.img} alt='slide1'></img>
+        </CarouselBody>
         <CarouselCaption
           className='text-danger'
           captionText={item.caption}

@@ -13,11 +13,21 @@ function App() {
     <Router>
       <Fragment>
         <AppHeader />
-        <CarouselBody />
-        <HeadlineContent />
-        <MidlineContent />
-        <CenterLineContent />
-        <BottomLineContent />
+        <section id='home'>
+          <CarouselBody />
+        </section>
+        <section id='product'>
+          <HeadlineContent />
+        </section>
+        <section id='about'>
+          <MidlineContent />
+        </section>
+        <section id='demo'>
+          <CenterLineContent />
+        </section>
+        <section id='contact'>
+          <BottomLineContent />
+        </section>
         <Footer />
         {/* <Switch>
           <Route path='/' component={HeadlineContent} exact></Route>

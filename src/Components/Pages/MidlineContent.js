@@ -26,7 +26,7 @@ function MidlineContent() {
       <Container fluid className='pt-3'>
         <Row>
           <Col lg={12} className='mx-auto justify-content-center text-center'>
-            <Label className='header-text'>Explore out demos</Label>
+            <Label className='header-text'>Explore our demos</Label>
           </Col>
         </Row>
         <Row>
