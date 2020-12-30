@@ -2,14 +2,23 @@ import React, { Fragment } from 'react';
 import {
   Card,
   CardImg,
-  CardImgOverlay,
   CardText,
-  CardTitle,
   Col,
   Container,
   Label,
   Row,
 } from 'reactstrap';
+
+const cardImg = [
+  {
+    url: require('../../Assets/landing1.jpg').default,
+    text: 'Website Landing',
+  },
+  {
+    url: require('../../Assets/landing2.jpg').default,
+    text: 'App Modern Landing',
+  },
+];
 
 function MidlineContent() {
   return (
@@ -29,32 +38,24 @@ function MidlineContent() {
           </Col>
         </Row>
         <Row className='pt-3 d-flex justify-content-center'>
-          <Col md={4}>
-            <Card inverse>
-              <CardImg
-                className='demo-card'
-                src={
-                  'https://blogassets.techpikk.com/uploads/2018/01/Landeux.png'
-                }
-                alt='Card image cap'
-              />
-            </Card>
-            <CardText className='card-text'>Website landing</CardText>
-          </Col>
-          <Col md={4}>
-            <Card inverse>
-              <CardImg
-                className='demo-card'
-                src={
-                  'https://blogassets.techpikk.com/uploads/2018/01/Landeux.png'
-                }
-                alt='Card image cap'
-              />
-            </Card>
-            <CardText className='card-text'>App Modern landing</CardText>
-          </Col>
+          {cardImg ? (
+            cardImg.map((value, key) => (
+              <Col md={4} key={key}>
+                <Card className='demo-card'>
+                  <CardImg
+                    className='demo-img'
+                    src={value.url}
+                    alt='Card image cap'
+                  ></CardImg>
+                </Card>
+                <CardText className='card-text'>{value.text}</CardText>
+              </Col>
+            ))
+          ) : (
+            <span></span>
+          )}
         </Row>
-        <Row className='pt-2'>
+        <Row className='pt-2 pb-2'>
           <Col lg={12}>
             <hr className='row1' />
           </Col>

@@ -1,6 +1,5 @@
 .appbar-item {
   text-decoration: none !important;
-
   margin-top: 10%;
   color: #2e2e2e;
 }
@@ -233,4 +232,18 @@ input:focus ~ .highlight {
 .last-text {
   font-size: 18px;
   font-weight: bold;
+}
+
+.demo-card {
+  border: none;
+  border-radius: 20px;
+}
+.demo-img {
+  height: 45vh;
+  max-width: 100vw;
+}
+
+.center-card {
+  text-decoration: none;
+  border: none;
 }

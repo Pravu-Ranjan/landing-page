@@ -5,6 +5,25 @@ import { BsPeopleFill } from 'react-icons/bs';
 import { BiSmile } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 
+const centerContentItem = [
+  {
+    icon: <RiEarthFill />,
+    label: `Enjoy your benifits`,
+    text: ` Get set up with the help of a trusted freelancer or a agency
+    from the Shopify Experts Marketplaces.`,
+  },
+  {
+    icon: <BsPeopleFill />,
+    label: `Switch to Soprano`,
+    text: `Bring your business to Soprano, no matter which ecommerce
+    platform you are currently using.`,
+  },
+  {
+    icon: <BiSmile />,
+    label: `Move your business online`,
+    text: `create a business whether you're got a fresh idea or are looking for a new way to make money.`,
+  },
+];
 function CenterLineContent() {
   return (
     <Fragment>
@@ -25,42 +44,21 @@ function CenterLineContent() {
           </Col>
         </Row>
         <Row className='pt-3 d-flex justify-content-center text-center'>
-          <Col md={3}>
-            <Card>
-              <CardBody className='mx-auto'>
-                <RiEarthFill className='card-icon' />
-                <Label className='card-text'>Move your business online</Label>
-                <p>
-                  create a business whether you're got a fresh idea or are
-                  looking for a new way to make money.
-                </p>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col md={3}>
-            <Card>
-              <CardBody className='mx-auto'>
-                <BsPeopleFill className='card-icon' />
-                <Label className='card-text'>Switch to Soprano</Label>
-                <p>
-                  Bring your business to Soprano, no matter which ecommerce
-                  platform you are currently using.
-                </p>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col md={3}>
-            <Card>
-              <CardBody className='mx-auto'>
-                <BiSmile className='card-icon' />
-                <Label className='card-text'>Enjoy your benifits</Label>
-                <p>
-                  Get set up with the help of a trusted freelancer or a agency
-                  from the Shopify Experts Marketplaces.
-                </p>
-              </CardBody>
-            </Card>
-          </Col>
+          {centerContentItem ? (
+            centerContentItem.map((value, key) => (
+              <Col md={3} key={key}>
+                <Card className='border-0'>
+                  <CardBody className='mx-auto'>
+                    <span className='card-icon'>{value.icon}</span>
+                    <Label className='card-text'>{value.label}</Label>
+                    <p>{value.text}</p>
+                  </CardBody>
+                </Card>
+              </Col>
+            ))
+          ) : (
+            <span></span>
+          )}
         </Row>
         <Row className='pt-5 pb-4'>
           <Col lg={12} className='mx-auto justify-content-center text-center'>

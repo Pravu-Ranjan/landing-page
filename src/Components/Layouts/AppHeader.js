@@ -22,14 +22,12 @@ function AppHeader() {
     let id = e.target.id;
     setActive(id);
     console.log(active, 'dnjks');
-    // document.querySelector(`#${active}`).classList.remove('active');
-    // document.querySelector(`#${active}`).classList.add('active');
   };
   console.log(active, 'dnjkssadas');
   return (
     <div>
       <div>
-        <Navbar color='light' light expand='xl'>
+        <Navbar color='light' light expand='xl' fixed='top'>
           <NavbarBrand href='/'>Soprano</NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
