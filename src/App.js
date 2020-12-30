@@ -29,10 +29,6 @@ function App() {
           <BottomLineContent />
         </section>
         <Footer />
-        {/* <Switch>
-          <Route path='/' component={HeadlineContent} exact></Route>
-          <Route path='/demos' component={MidlineContent}></Route>
-        </Switch> */}
       </Fragment>
     </Router>
   );

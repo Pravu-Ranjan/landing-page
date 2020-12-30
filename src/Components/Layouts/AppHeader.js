@@ -26,6 +26,7 @@ function AppHeader() {
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
+
   return (
     <div>
       <div>
@@ -49,9 +50,6 @@ function AppHeader() {
                   >
                     Home
                   </Link>
-                  {/* <Link to='/home' id='item1' className='appbar-item'>
-                    Home
-                  </Link> */}
                 </NavLink>
               </NavItem>
               <NavItem className='mr-5'>
@@ -67,9 +65,6 @@ function AppHeader() {
                   >
                     Products
                   </Link>
-                  {/* <Link to='/product' id='item2' className='appbar-item'>
-                    Products
-                  </Link> */}
                 </NavLink>
               </NavItem>
               <NavItem className='mr-5'>
@@ -85,9 +80,6 @@ function AppHeader() {
                   >
                     About Us
                   </Link>
-                  {/* <Link to='/about' id='item3' className='appbar-item'>
-                    About Us
-                  </Link> */}
                 </NavLink>
               </NavItem>
               <NavItem className='mr-5'>
@@ -103,9 +95,6 @@ function AppHeader() {
                   >
                     Demos
                   </Link>
-                  {/* <Link to='/demo' id='item4' className='appbar-item'>
-                    Demos
-                  </Link> */}
                 </NavLink>
               </NavItem>
               <NavItem className='mr-5'>
@@ -121,9 +110,6 @@ function AppHeader() {
                   >
                     Contact Us
                   </Link>
-                  {/* <Link to='/contact' id='item5' className='appbar-item'>
-                    Contact Us
-                  </Link> */}
                 </NavLink>
               </NavItem>
             </Nav>
